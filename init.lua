@@ -1,0 +1,2 @@
+require("min")
+print("Hello")
