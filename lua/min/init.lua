@@ -1,2 +1,2 @@
 require("min.remap")
-print("hello from min")
+require("min.set")

@@ -1,2 +1,1 @@
 require("min")
-print("Hello")
