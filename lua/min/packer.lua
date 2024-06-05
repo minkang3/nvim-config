@@ -23,8 +23,12 @@ return require('packer').startup(function(use)
 	  as = 'rose-pine'})
 
   use { "catppuccin/nvim", as = "catppuccin" }
+  vim.cmd('colorscheme catppuccin')
 
-  use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+  use {'nvim-treesitter/nvim-treesitter', 
+--        disable = true,
+--        commit = 'f9773e4',}
+        run = ':TSUpdate'}
   use ('nvim-treesitter/playground')
   use ('ThePrimeagen/harpoon')
   use ('mbbill/undotree')
@@ -55,7 +59,22 @@ return require('packer').startup(function(use)
 	  "neovim/nvim-lspconfig",
   }
 
+--  use {
+--    "jiangmiao/auto-pairs",
+--    disable = true,
+--  }
+
   use {
-    "jiangmiao/auto-pairs",
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = function()
+        require("nvim-autopairs").setup {}
+    end
   }
+
+  use {"ThePrimeagen/vim-be-good",}
+
+  use { "junegunn/fzf", run = "./install --bin" }
+--  use ('junegunn/fzf.vim')
+  use ('ibhagwan/fzf-lua')
 end)

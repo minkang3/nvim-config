@@ -27,3 +27,12 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 
 vim.g.mapleader = " "
+
+vim.opt.cursorline = true
+
+-- Sets relative line no in netrw
+vim.g.netrw_bufsettings = 'noma nomod nu rnu nobl nowrap ro'
+
+-- Disables auto nextline comments
+vim.cmd('autocmd BufEnter * set formatoptions-=cro')
+vim.cmd('autocmd BufEnter * setlocal formatoptions-=cro')
