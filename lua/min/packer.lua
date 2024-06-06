@@ -77,4 +77,6 @@ return require('packer').startup(function(use)
   use { "junegunn/fzf", run = "./install --bin" }
 --  use ('junegunn/fzf.vim')
   use ('ibhagwan/fzf-lua')
+
+  use ('kylechui/nvim-surround')
 end)
