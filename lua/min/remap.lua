@@ -7,8 +7,11 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "H", "^")
 vim.keymap.set("n", "L", "$")
 
-vim.keymap.set("n", "J", "10j")
-vim.keymap.set("n", "K", "10k")
+vim.keymap.set("n", "J", "5jzz")
+vim.keymap.set("n", "K", "5kzz")
+
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
 
 
 --vim.keymap.set("n", "<leader>b", ":ls<CR>:b<Space>")
@@ -16,13 +19,9 @@ vim.keymap.set("n", "K", "10k")
 vim.keymap.set("n", "<Tab>", ":bnext<CR>")
 vim.keymap.set("n", "<S-Tab>", ":bprev<CR>")
 
--- FZF Remaps
-local fzf = require("fzf-lua")
---vim.keymap.set('n', '<leader>pf', ":Files<CR>")
-vim.keymap.set('n', '<leader>pf', fzf.files)
-vim.keymap.set('n', '<leader>ps', ":lua require('fzf-lua').grep()<CR><CR>")
-vim.keymap.set('n', '<leader>ph', fzf.oldfiles)
 
-vim.keymap.set('n', '<leader>ba', fzf.buffers)
-vim.keymap.set('n', '<leader>bl', fzf.lines)
-vim.keymap.set('n', '<leader>l', fzf.blines)
+vim.keymap.set('n', "<C-d>", "<C-d>zz")
+vim.keymap.set('n', "<C-u>", "<C-u>zz")
+
+vim.keymap.set('n', "<C-e>", "2<C-e>")
+vim.keymap.set('n', "<C-y>", "2<C-y>")
