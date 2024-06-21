@@ -1,10 +1,11 @@
 -- Leader Button
 vim.g.mapleader = " "
+vim.keymap.set("n", "<Space>", "<NOP>")
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- Visual Mode Keymaps
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "<C-j>", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "<C-k>", ":m '<-2<CR>gv=gv")
 --vim.keymap.set('v', "<leader>p", "\"_dP")
 vim.keymap.set('v', "p", "\"_dP")
 
@@ -34,3 +35,7 @@ vim.keymap.set('n', "<C-u>", "<C-u>zz")
 vim.keymap.set('n', "<C-e>", "2<C-e>")
 vim.keymap.set('n', "<C-y>", "2<C-y>")
 
+vim.keymap.set('n', "<C-j>", "2<C-e>")
+vim.keymap.set('n', "<C-k>", "2<C-y>")
+
+vim.keymap.set('n', "<leader>\\", ":LspStop<CR>")

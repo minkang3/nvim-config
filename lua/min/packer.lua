@@ -79,4 +79,17 @@ return require('packer').startup(function(use)
   use ('ibhagwan/fzf-lua')
 
   use ('kylechui/nvim-surround')
+
+  use ('christoomey/vim-tmux-navigator')
+
+--  use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
+
+  use ("folke/todo-comments.nvim")
+
+--  use ({
+--      "NvChad/ui",
+--      as = "nvchad-ui"
+--  })
+
+  use ("nvim-treesitter/nvim-treesitter-context")
 end)
